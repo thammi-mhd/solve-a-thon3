@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #c4f5da, #d3f5bf);
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.business-card {
+    width: 350px;
+    height: 220px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.business-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-front {
+    background: linear-gradient(135deg, #46afec, #81cbfc);
+    color: white;
+    text-align: center;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-bottom: 10px;
+}
+
+.card-front h1 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-front p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.card-back {
+    background-color: #b5e1fa;
+    color: #333333;
+    transform: rotateY(180deg);
+    text-align: left;
+    padding: 20px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.card-back p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.card-back a {
+    color: #46afec;
+    text-decoration: none;
+}
+
+.card-back a:hover {
+    text-decoration: underline;
+}
